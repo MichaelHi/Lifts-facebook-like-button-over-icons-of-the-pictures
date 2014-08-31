@@ -5,7 +5,7 @@ In my last repository I tried to fix the z-index of the facebook-like-box.
 The fix works fine, but I found out, that the icons of the pictures still hide the facebook-like-flyout.
 This can be fixed by a change of 2 z-indexes of the oxid.css.
 
-/* ---Hier der Code --- */
+/* ---Here the code --- */
 
 .social span {
     float: left;
@@ -22,7 +22,7 @@ This can be fixed by a change of 2 z-indexes of the oxid.css.
     display: none;
     z-index: 33;
     
-  /* --- Ende --- */
+  /* --- Finish --- */
     
   Why did I not change .social span-z-index to 100 and leave .marker-z-index unchanged (99)?
   If .social span-z-index were 100, it would be too high for the cloudzoom--z-index, that is defined at cloudzoom.js (line 271) with 99. To keep cloudzoom-z-index unchanged (including the IE6 fix in this file), I recommend my solution.
